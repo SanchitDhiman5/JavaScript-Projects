@@ -1,0 +1,86 @@
+body{
+    text-align: center;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-container{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 500px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.btn{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 40px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.btn1{
+    background-color: green;
+}
+.btn2{
+    background-color: red;
+}
+.btn3{
+    background-color: yellow;
+}
+.btn4{
+    background-color: blue;
+}
+
+.flash{
+    box-shadow: 0 0 0 0 100px greenyellow;
+    scale: 1.1;
+    opacity: 1;
+}
+
+#theme-toggle:active{
+    scale: 0.7;
+}
+
+/* Default light theme */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+/* Style for the button */
+.theme-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 10%;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+.theme-dark-toggle{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    /* border-radius: 10%;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold; */
+}
+
+.red-alert{
+    background-color: red;
+}
