@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: aliceblue;
+}
+
+.container {
+  height: 70vh;
+  width: 90vw;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  height: 95%;
+  width: 35rem;
+  background-color: blue;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.boxes {
+  width: 10rem;
+  height: 10rem;
+  background-color: green;
+}
