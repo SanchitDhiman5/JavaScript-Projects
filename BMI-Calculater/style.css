@@ -78,7 +78,7 @@ input {
   border-radius: 10px;
   outline: none;
   transition: all 0.3s ease;
-  appearance: none;
+  /* appearance: none; */
 }
 
 input:focus {
