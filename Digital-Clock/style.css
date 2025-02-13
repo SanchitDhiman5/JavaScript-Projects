@@ -13,7 +13,7 @@ body {
   height: 100vh;
   background-color: var(--bg-light);
   color: var(--text-light);
-  transition: background 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .clock-container {
@@ -39,7 +39,7 @@ body {
   cursor: pointer;
   background: var(--text-light);
   color: var(--bg-light);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .theme-toggle:hover {
