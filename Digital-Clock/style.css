@@ -1,0 +1,57 @@
+:root {
+  --bg-light: #f4f4f9;
+  --text-light: #333;
+  --bg-dark: #1e1e2e;
+  --text-dark: #ffffff;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.clock-container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.clock {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: var(--text-light);
+  color: var(--bg-light);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dark-mode .theme-toggle {
+  background: var(--text-dark);
+  color: var(--bg-dark);
+}
