@@ -1,0 +1,127 @@
+:root {
+  --bg-light: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  --text-light: #2c3e50;
+  --bg-dark: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+  --text-dark: #f8f9fa;
+  --container-light: rgba(255, 255, 255, 0.3);
+  --container-dark: rgba(40, 40, 40, 0.8);
+  --button-light: #6a11cb;
+  --button-dark: #fff;
+  --input-light: #ffffff;
+  --input-dark: #262626;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+  flex-direction: column;
+}
+
+.game-container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: var(--container-light);
+  backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: 450px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 12px;
+  font-size: 18px;
+  width: 80%;
+  margin: 15px 0;
+  border: 1px solid #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  background: var(--input-light);
+  transition: box-shadow 0.3s, background-color 0.6s ease;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+input:focus {
+  box-shadow: 0 0 10px rgba(236, 235, 238, 0.7);
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: var(--button-light);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #5a0fc9;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+.dark-mode .game-container {
+  background: var(--container-dark);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode button {
+  background: var(--button-dark);
+  color: #0f0f0f;
+}
+
+.dark-mode button:hover {
+  background: #515152;
+  box-shadow: 0 5px 10px #cac9c971;
+  color: #fff;
+}
+
+.dark-mode input {
+  background: var(--input-dark);
+  color: var(--text-dark);
+}
