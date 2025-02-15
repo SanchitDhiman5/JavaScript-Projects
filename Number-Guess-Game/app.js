@@ -47,6 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
       ", "
     )}`;
 
+    //Stop the Game after 5 Attempts:
+    if (attemptCount === 5 && attemptValue != randNum) {
+      input.disabled = true;
+      checkBtn.disabled = true;
+      message.innerHTML = `Oops! You have used all 5 attempts... Start New Game ):`;
+      return;
+    }
+
     if (attemptValue === randNum) {
       message.style.color = "green";
       message.innerHTML = `Congratulations! The number was ${randNum}. You won in ${attemptCount} attempts.`;
