@@ -54,7 +54,11 @@ h1 {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
+button,
+input {
+  -webkit-tap-highlight-color: transparent; /* Removes blue highlight */
+  outline: none;
+}
 input {
   padding: 12px;
   font-size: 18px;
@@ -84,7 +88,8 @@ button {
   cursor: pointer;
   background: var(--button-light);
   color: white;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
+  user-select: none;
 }
 
 button:hover {
