@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const message = document.querySelector("#message");
   const attemptSpan = document.querySelector("span");
   const switchThemeBtn = document.getElementById("themeToggle");
+  const prevAttemptsList = document.querySelector(".prevAttempts");
 
   let randNum = 0;
   let attemptCount = 0;
+  let prevAttempts = [];
 
   // Function to initialize the game
   const startGame = () => {
@@ -20,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     newGame.innerHTML = "New Game";
     randNum = Math.floor(Math.random() * 100) + 1;
     attemptCount = 0;
+    prevAttempts = [];
     attemptSpan.textContent = attemptCount;
     console.log(`Generated Number: ${randNum}`);
   };
@@ -34,9 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    prevAttempts.push(attemptValue);
     attemptCount++;
     attemptSpan.textContent = attemptCount;
     input.value = "";
+
+    //   Update previous attempt List:
+    prevAttemptsList.innerHTML = `Previous attempts: ${prevAttempts.join(
+      ", "
+    )}`;
 
     if (attemptValue === randNum) {
       message.style.color = "green";
