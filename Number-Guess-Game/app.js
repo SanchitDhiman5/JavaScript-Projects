@@ -75,6 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event Listeners
   newGame.addEventListener("click", startGame);
   checkBtn.addEventListener("click", checkGuess);
+  //checkGuess by pressing ENTER key:
+  input.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+      checkGuess();
+    }
+  });
   switchThemeBtn.addEventListener("click", toggleTheme);
 
   // Disable the check button initially
